@@ -13,12 +13,15 @@ from datetime import datetime
 import nltk
 from nltk.tokenize import word_tokenize
 from io import BytesIO
+import openai
 
 nltk.download('punkt')
 nltk.download('punkt_tab')
 
 nest_asyncio.apply()
 _ = load_dotenv(find_dotenv())
+openai_key = st.secrets["openai"]["api_key"] 
+openai.api_key = openai_key
 
 PASTA_MENSAGENS = Path(__file__).parent / 'mensagens'
 PASTA_MENSAGENS.mkdir(exist_ok=True)
