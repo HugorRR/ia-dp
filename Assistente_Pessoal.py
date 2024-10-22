@@ -19,7 +19,7 @@ nltk.download('punkt_tab')
 
 nest_asyncio.apply()
 _ = load_dotenv(find_dotenv())
-openai_key = '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'
+
 PASTA_MENSAGENS = Path(__file__).parent / 'mensagens'
 PASTA_MENSAGENS.mkdir(exist_ok=True)
 CACHE_DESCONVERTE = {}
